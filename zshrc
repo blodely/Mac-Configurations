@@ -95,7 +95,7 @@ export LC_ALL=en_US.UTF-8
 
 alias gitpush="git push && git gc"
 alias gitpull="git pull && git gc"
-alias gitupdatepods="git pull && git push local master"
+alias gitupdatepods="cd ~/.cocoapods/repos/master && git pull && git gc"
 alias gitstatus="git status"
 alias gitpushall="git remote | xargs -L1 git push --all && echo '======= NOW WILL EXECUTE GC =======' && git gc"
 
