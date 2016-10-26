@@ -90,8 +90,8 @@ export LC_ALL=en_US.UTF-8
 # FOR A FULL LIST OF ACTIVE ALIASES, RUN `alias`.
 #
 # EXAMPLE ALIASES
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias gitpush="git push && git gc"
 alias gitpull="git pull && git gc"
