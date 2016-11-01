@@ -6,3 +6,8 @@ My mac configuration collection
 
 for oh-my-zsh configuration.
 
+to use, just type `cp zshrc ~/.zshrc` in terminal.
+
+### 2nd
+
+©️Luo Yu, 2016
