@@ -97,7 +97,6 @@ alias gitupdatepods="cd ~/.cocoapods/repos/master && git pull && git gc"
 alias gitstatus="git status"
 alias gitpushall="git remote | xargs -L1 git push --all && echo '======= NOW WILL EXECUTE GC =======' && git gc"
 
-
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
