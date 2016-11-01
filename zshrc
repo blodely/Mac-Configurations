@@ -91,12 +91,8 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias gitpush="git push && git gc"
-alias gitpull="git pull && git gc"
+alias gitpush="echo '\n======= GIT PULL DEFAULT REMOTE =======' git push && echo '======= GIT GC =======' && git gc"
+alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE =======' && git pull && echo '======= GIT GC =======' && git gc"
 alias gitupdatepods="cd ~/.cocoapods/repos/master && git pull && git gc"
-alias gitstatus="git status"
-alias gitpushall="git remote | xargs -L1 git push --all && echo '======= NOW WILL EXECUTE GC =======' && git gc"
-
-# source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
+alias gitstatus="echo '\n======= GIT STATUS =======' && git status"
+alias gitpushall="git remote | xargs -L1 git push --all && echo '======= GIT GC =======' && git gc"
