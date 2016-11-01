@@ -3,13 +3,11 @@
 # CREATE AT 2013-09-10
 #
 # PATH TO OH-MY-ZSH INSTALLATION.
-export ZSH=/Users/yul/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # SET NAME OF THE THEME TO LOAD.
-# Look in ~/.oh-my-zsh/themes/
-# OPTIONALLY, IF YOU SET THIS TO "RANDOM", 
-# IT'LL LOAD A RANDOM THEME EACH
-# TIME THAT OH-MY-ZSH IS LOADED.
+# LOOK IN ~/.oh-my-zsh/themes/
+# "robbyrussell" "random"
 ZSH_THEME="agnoster"
 
 # UNCOMMENT THE FOLLOWING LINE TO USE CASE-SENSITIVE COMPLETION.
@@ -82,7 +80,7 @@ export LC_ALL=en_US.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 
 # SSH
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # SET PERSONAL ALIASES, OVERRIDING THOSE PROVIDED BY OH-MY-ZSH LIBS,
 # PLUGINS, AND THEMES. ALIASES CAN BE PLACED HERE, THOUGH OH-MY-ZSH
