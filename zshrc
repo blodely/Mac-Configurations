@@ -95,5 +95,6 @@ alias gitpush="echo '\n======= GIT PULL DEFAULT REMOTE' && git push --verbose &&
 alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE' && git pull --verbose && echo '======= GIT GC' && git gc"
 alias gitupdatepods="echo '\n======= UPDATE COCOAPODS REPOS BY GIT PULL' && cd ~/.cocoapods/repos/master && git pull --verbose && echo '======= GIT GC' && git gc"
 alias gitstatus="echo '\n======= GIT STATUS' && git status"
-alias gitpushall="echo '\n======= GIT PULL ALL REMOTES' && git remote | xargs -L1 git push --all && echo '======= GIT GC' && git gc"
+alias gitpushall="echo '\n======= GIT PUSH ALL REMOTES' && git remote | xargs -L1 git push --all && echo '======= GIT GC' && git gc"
+alias gitsync="gitpull && gitpushall"
 alias podinst="echo '\n======= POD INSTALL VERBOSE' && pod install --verbose"
