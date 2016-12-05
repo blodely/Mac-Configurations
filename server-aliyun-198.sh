@@ -12,7 +12,7 @@ apt-get upgrade -y
 # INSTALL APP
 apt-get install -y git zsh vim nginx mysql-server php5-fpm php5-mysqlnd
 
-# MOUNT DATA DISK
+# MOUNT DATA DISK BY DEFAULT
 mkdir /dimo
 echo '/dev/xvdb1 /dimo ext4 defaults 0 0' >> /etc/fstab
 mount -a
