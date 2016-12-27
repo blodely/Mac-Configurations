@@ -88,6 +88,7 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # FOR A FULL LIST OF ACTIVE ALIASES, RUN `alias`.
 #
 # EXAMPLE ALIASES
+
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -99,3 +100,5 @@ alias gitsync="gitpull && gitpushall"
 
 alias podspecupd="echo '\n======= UPDATE COCOAPODS REPOS BY GIT PULL >>>>>>>' && cd ~/.cocoapods/repos/master && git pull --verbose && echo '======= GIT GC >>>>>>>' && git gc && cd -"
 alias podinst="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
+
+export PATH="/usr/local/bin:$PATH"
