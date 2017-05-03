@@ -104,6 +104,7 @@ alias gitsync="gitpull && gitpushall"
 alias podspecupd="echo '\n======= UPDATE COCOAPODS REPOS BY GIT PULL >>>>>>>' && cd ~/.cocoapods/repos/master && git pull --verbose && echo '======= GIT GC >>>>>>>' && git gc && cd -"
 alias podinst="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
 alias podlibins="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && pod install --project-directory=Example --verbose"
+alias podreinstall="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && rm Podfile.lock && pod install --verbose"
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
