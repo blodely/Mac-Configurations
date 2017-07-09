@@ -99,7 +99,6 @@ alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE >>>>>>>' && git pull --ve
 alias gitpushall="echo '\n======= GIT PUSH ALL REMOTES >>>>>>>' && git remote | xargs -L1 git push --all && echo '======= GIT GC >>>>>>>' && git gc"
 alias gitcomas="echo '\n======= GIT CO MASTER >>>>>>>' && git checkout master"
 alias gitmgmas="echo '\n======= GIT MERGE MASTER >>>>>>' && git merge master"
-alias gitsync="gitpull && gitpushall"
 
 alias podspecupd="echo '\n======= UPDATE COCOAPODS REPOS BY GIT PULL >>>>>>>' && cd ~/.cocoapods/repos/master && git pull --verbose && echo '======= GIT GC >>>>>>>' && git gc && cd -"
 alias podinst="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && pod install"
