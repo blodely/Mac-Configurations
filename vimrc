@@ -5,6 +5,9 @@
 set shiftwidth=2
 set softtabstop=2
 
+" USE TAB NOT SPACE
+set noexpandtab
+
 " SHOW LINE NUMBER
 set nu
 
