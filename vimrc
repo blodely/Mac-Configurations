@@ -14,4 +14,7 @@ set nu
 " AUTO INDENT
 set autoindent
 
+" HIGHLIGHT MATCH CHARS
+set showmatch
+
 syntax on
