@@ -2,8 +2,8 @@
 " EMAIL: indie.luo@gmail.com
 
 " SPACE WIDTH
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 
 " USE TAB NOT SPACE
 set noexpandtab
