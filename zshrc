@@ -93,6 +93,7 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias openws="open *.xcworkspace"
+alias openpj="open *.xcodeproj"
 
 alias gitpush="echo '\n======= GIT PUSH DEFAULT REMOTE >>>>>>>' && git push --verbose && echo '======= GIT GC >>>>>>>' && git gc"
 alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE >>>>>>>' && git pull --verbose && echo '======= GIT GC >>>>>>>' && git gc"
