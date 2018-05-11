@@ -93,6 +93,7 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias openws="open *.xcworkspace"
+alias openpj="open *.xcodeproj"
 
 alias gitpush="echo '\n======= GIT PUSH DEFAULT REMOTE >>>>>>>' && git push --verbose && echo '======= GIT GC >>>>>>>' && git gc"
 alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE >>>>>>>' && git pull --verbose && echo '======= GIT GC >>>>>>>' && git gc"
@@ -102,7 +103,6 @@ alias gitmgmas="echo '\n======= GIT MERGE MASTER >>>>>>' && git merge master"
 
 alias podspecupd="echo '\n======= UPDATE COCOAPODS REPOS BY GIT PULL >>>>>>>' && cd ~/.cocoapods/repos/master && git pull --verbose && echo '======= GIT GC >>>>>>>' && git gc && cd -"
 alias podinst="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && pod install"
-alias podreinst="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && rm Podfile.lock && pod install"
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
