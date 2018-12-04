@@ -107,3 +107,5 @@ alias podreinst="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && rm Podfile.lock
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
