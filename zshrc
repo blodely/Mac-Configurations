@@ -97,6 +97,7 @@ alias openpj="open *.xcodeproj"
 
 alias gitpush="echo '\n======= GIT PUSH DEFAULT REMOTE >>>>>>>' && git push --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
 alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE >>>>>>>' && git pull --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
+alias gitrebase="echo '\n======= GIT PULL REBASE DEFAULT REMOTE >>>>>>>' && git pull --rebase && echo ''"
 alias gitpushall="echo '\n======= GIT PUSH ALL REMOTES >>>>>>>' && git remote | xargs -L1 git push --all && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
 alias gitcomas="echo '\n======= GIT CO MASTER >>>>>>>' && git checkout master"
 alias gitmgmas="echo '\n======= GIT MERGE MASTER >>>>>>' && git merge master"
