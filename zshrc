@@ -53,7 +53,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # EXAMPLE FORMAT: plugins=(rails git textmate ruby lighthouse)
 # ADD WISELY, AS TOO MANY PLUGINS SLOW DOWN SHELL STARTUP.
 
-plugins=(git zsh-syntax-highlighting)
+plugins=(git)
 
 # USER CONFIGURATION
 
@@ -111,4 +111,5 @@ export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# brew install zsh-syntax-highlighting
 
