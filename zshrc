@@ -109,3 +109,6 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
