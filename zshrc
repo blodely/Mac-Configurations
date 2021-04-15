@@ -103,7 +103,8 @@ alias gitcomas="echo '\n======= GIT CO MASTER >>>>>>>' && git checkout master"
 alias gitmgmas="echo '\n======= GIT MERGE MASTER >>>>>>' && git merge master"
 
 alias podspecupd="echo '\n======= UPDATE COCOAPODS REPOS BY GIT PULL >>>>>>>' && cd ~/.cocoapods/repos/master && git pull --verbose && echo '======= GIT GC >>>>>>>' && git gc && cd -"
-alias podinst="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && pod install"
+alias podinst="echo '\n======= POD INSTALL >>>>>>>' && pod install"
+alias podinstv="echo \n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
