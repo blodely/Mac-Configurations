@@ -106,6 +106,8 @@ alias podspecupd="echo '\n======= UPDATE COCOAPODS REPOS BY GIT PULL >>>>>>>' &&
 alias podinst="echo '\n======= POD INSTALL >>>>>>>' && pod install"
 alias podinstv="echo \n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
 
+alias ping4="ping -t 4 "
+
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
