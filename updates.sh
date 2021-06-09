@@ -28,7 +28,7 @@ echo ""
 echo "--- 2. LYSpecs repo ---"
 cd ~/.cocoapods/repos/LYSpecs
 git pull --verbose
-git gc
+#git gc
 echo ""
 echo "--- All ops are finished."
 echo "T H E   E N D."
