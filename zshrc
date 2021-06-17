@@ -76,6 +76,23 @@ export LC_ALL=en_US.UTF-8
 #   export EDITOR='mvim'
 # fi
 
+hp() {
+  if [ "$1" = "enable" ]
+  then
+    PORT="1087"
+    if [ -n "$2" ]
+    then
+      PORT="$2"
+    fi
+
+    export HTTP_PROXY=http://127.0.0.1:$PORT
+    export HTTPS_PROXY=http://127.0.0.1:$PORT
+  else
+    export HTTP_PROXY=""
+    export HTTPS_PROXY=""
+  fi
+}
+
 # COMPILATION FLAGS
 # export ARCHFLAGS="-arch x86_64"
 
