@@ -8,7 +8,17 @@ export ZSH=~/.oh-my-zsh
 # SET NAME OF THE THEME TO LOAD.
 # LOOK IN ~/.oh-my-zsh/themes/
 # "robbyrussell" "random"
-ZSH_THEME="agnoster"
+if [[ "$ostype" = darwin* ]]; then
+  ZSH_THEME="agnoster"
+else
+  USE_POWERLINE="true"
+  if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+    source /usr/share/zsh/manjaro-zsh-config
+  fi
+  if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+    source /usr/share/zsh/manjaro-zsh-prompt
+  fi
+fi
 
 # UNCOMMENT THE FOLLOWING LINE TO USE CASE-SENSITIVE COMPLETION.
 # CASE_SENSITIVE="true"
@@ -130,6 +140,8 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ "$ostype" = darwin* ]]; then
+  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # brew install zsh-syntax-highlighting
+fi
 
