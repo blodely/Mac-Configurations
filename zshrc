@@ -9,8 +9,9 @@ export ZSH=~/.oh-my-zsh
 # LOOK IN ~/.oh-my-zsh/themes/
 # "robbyrussell" "random" "agnoster"
 if [[ "$ostype" = darwin* ]]; then
-  ZSH_THEME="robbyrussell"
+  ZSH_THEME="agnoster"
 else
+  ZSH_THEME="agnoster"
   USE_POWERLINE="true"
   if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
     source /usr/share/zsh/manjaro-zsh-config
