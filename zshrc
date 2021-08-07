@@ -8,10 +8,12 @@ export ZSH=~/.oh-my-zsh
 # SET NAME OF THE THEME TO LOAD.
 # LOOK IN ~/.oh-my-zsh/themes/
 # "robbyrussell" "random" "agnoster"
-if [[ "$ostype" = darwin* ]]; then
+if [[ "$OSTYPE" = darwin* ]]; then
   ZSH_THEME="agnoster"
 else
-  ZSH_THEME="agnoster"
+  if [[ $(command -v apt-get) || $(command -v yum) ]] && [[ $(command -v systemctl) ]]; then
+    ZSH_THEME="robbyrussell"
+  fi
   USE_POWERLINE="true"
   if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
     source /usr/share/zsh/manjaro-zsh-config
@@ -141,7 +143,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-if [[ "$ostype" = darwin* ]]; then
+if [[ "$OSTYPE" = darwin* ]]; then
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # brew install zsh-syntax-highlighting
 fi
