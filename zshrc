@@ -122,8 +122,7 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias openws="open *.xcworkspace"
-alias openpj="open *.xcodeproj"
+
 
 alias gitpush="echo '\n======= GIT PUSH DEFAULT REMOTE >>>>>>>' && git push --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
 alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE >>>>>>>' && git pull --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
@@ -132,9 +131,15 @@ alias gitpushall="echo '\n======= GIT PUSH ALL REMOTES >>>>>>>' && git remote | 
 alias gitcomas="echo '\n======= GIT CO MASTER >>>>>>>' && git checkout master"
 alias gitmgmas="echo '\n======= GIT MERGE MASTER >>>>>>' && git merge master"
 
-alias podspecupd="echo '\n======= UPDATE COCOAPODS REPOS BY GIT PULL >>>>>>>' && cd ~/.cocoapods/repos/master && git pull --verbose && echo '======= GIT GC >>>>>>>' && git gc && cd -"
-alias podinst="echo '\n======= POD INSTALL >>>>>>>' && pod install"
-alias podinstv="echo \n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
+alias ssha="ssh -o ServerAliveInterval=59 "
+
+if [[ "$OSTYPE" = darwin* ]]; then
+  alias openws="open *.xcworkspace"
+  alias openpj="open *.xcodeproj"
+  alias podspecupd="echo '\n======= UPDATE COCOAPODS REPOS BY GIT PULL >>>>>>>' && cd ~/.cocoapods/repos/master && git pull --verbose && echo '======= GIT GC >>>>>>>' && git gc && cd -"
+  alias podinst="echo '\n======= POD INSTALL >>>>>>>' && pod install"
+  alias podinstv="echo \n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
+fi
 
 alias ping4="ping -t 4 "
 
