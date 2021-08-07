@@ -12,7 +12,7 @@ if [[ "$OSTYPE" = darwin* ]]; then
   ZSH_THEME="agnoster"
 else
   if [[ $(command -v apt-get) || $(command -v yum) ]] && [[ $(command -v systemctl) ]]; then
-    ZSH_THEME="robbyrussell"
+    ZSH_THEME="agnoster"
   fi
   USE_POWERLINE="true"
   if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
