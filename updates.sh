@@ -30,6 +30,9 @@ cd ~/.cocoapods/repos/LYSpecs
 git pull --verbose
 #git gc
 echo ""
+echo "--- 3. DO REPO-UPD command ---"
+pod repo update
+echo ""
 echo "--- All ops are finished."
 echo "T H E   E N D."
 echo ""
