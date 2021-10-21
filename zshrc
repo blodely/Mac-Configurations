@@ -152,3 +152,6 @@ if [[ "$OSTYPE" = darwin* ]]; then
 # brew install zsh-syntax-highlighting
 fi
 
+# RUBY env for Homebrew at Mac-Soc
+#export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
