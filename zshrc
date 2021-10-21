@@ -136,7 +136,6 @@ alias ssha="ssh -o ServerAliveInterval=59 "
 if [[ "$OSTYPE" = darwin* ]]; then
   alias openws="open *.xcworkspace"
   alias openpj="open *.xcodeproj"
-  alias podspecupd="echo '\n======= UPDATE COCOAPODS REPOS BY GIT PULL >>>>>>>' && cd ~/.cocoapods/repos/master && git pull --verbose && echo '======= GIT GC >>>>>>>' && git gc && cd -"
   alias podinst="echo '\n======= POD INSTALL >>>>>>>' && pod install"
   alias podinstv="echo \n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
 fi
