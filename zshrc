@@ -137,7 +137,7 @@ if [[ "$OSTYPE" = darwin* ]]; then
   alias openws="open *.xcworkspace"
   alias openpj="open *.xcodeproj"
   alias podinst="echo '\n======= POD INSTALL >>>>>>>' && pod install"
-  alias podinstv="echo \n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
+  alias podinstv="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
 fi
 
 alias ping4="ping -t 4 "
@@ -146,13 +146,14 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="~/Developer/flutter/bin:$PATH"
 
 if [[ "$OSTYPE" = darwin* ]]; then
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  #source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # brew install zsh-syntax-highlighting
 fi
 
 # RUBY env for Homebrew at Mac-Soc
-#export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
