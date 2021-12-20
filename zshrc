@@ -137,6 +137,7 @@ if [[ "$OSTYPE" = darwin* ]]; then
   alias openws="open *.xcworkspace"
   alias openpj="open *.xcodeproj"
   alias podinst="echo '\n======= POD INSTALL >>>>>>>' && pod install"
+  alias podinste="echo '\n======= POD INSTALL >>>>>>>' && pod install --project-directory=Example"
   alias podinstv="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
 fi
 
