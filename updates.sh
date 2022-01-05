@@ -23,12 +23,12 @@ echo "--- 1. Master repo ---"
 cd ~/.cocoapods/repos/cocoapods
 git pull --verbose
 echo ""
-git gc
+#git gc
 echo ""
 echo "--- 2. LYSpecs repo ---"
 cd ~/.cocoapods/repos/LYSpecs
 git pull --verbose
-#git gc
+git gc
 echo ""
 echo "--- 3. DO REPO-UPD command ---"
 pod repo update
