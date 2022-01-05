@@ -20,7 +20,7 @@ echo ""
 echo "----------------------------------"
 echo "Generating LICENSE file:"
 
-echo "Copyright (c) 2022 Luo Yu <indie.luo@gmail.com>
+echo "Copyright (c) 2022 $ip_creator <$ip_email>
 
 This is a private project. ALL RIGHTS RESERVED.
 " > LICENSE
