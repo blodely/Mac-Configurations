@@ -70,9 +70,9 @@ This is module $ip_lib.
   s.author           = { '$ip_creator' => '$ip_email' }
   s.source           = { :git => '', :tag => s.version.to_s }
   s.ios.deployment_target = '11.0'
-  s.source_files = 'activity/Classes/**/*'
+  s.source_files = '$ip_lib/Classes/**/*'
   # s.resource_bundles = {
-  #   'activity' => ['activity/Assets/*.png']
+  #   '$ip_lib' => ['$ip_lib/Assets/*.png']
   # }
   s.frameworks = 'UIKit' #, 'MapKit'
   s.dependency 'LYCategory'
