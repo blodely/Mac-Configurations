@@ -147,7 +147,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export PATH="~/Developer/flutter/bin:$PATH"
+# export PATH="~/Developer/flutter/bin:$PATH"
 
 if [[ "$OSTYPE" = darwin* ]]; then
   if [[ "${UNAME_MACHINE}" == "arm64" ]]
@@ -160,5 +160,7 @@ if [[ "$OSTYPE" = darwin* ]]; then
 fi
 
 # RUBY env for Homebrew at Mac-Soc
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+if [[ "${UNAME_MACHINE}" == "arm64" ]]; then
+  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+fi
 
