@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 This is module $ip_lib.
   DESC
-  s.homepage         = ''
+  s.homepage         = 'http://localhost'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '$ip_creator' => '$ip_email' }
   s.source           = { :git => '', :tag => s.version.to_s }
