@@ -96,17 +96,34 @@ echo "//
 //  ${ip_lib}
 //
 //  CREATED BY $ip_creator ON $timestamp.
-//  COPYRIGHT (C) 2021 $ip_lib. ALL RIGHTS RESERVED.
+//  COPYRIGHT (C) 2022 $ip_lib. ALL RIGHTS RESERVED.
 //
 
-#ifndef ${ip_lib}_h
-#define ${ip_lib}_h
+#import <Foundation/Foundation.h>
 
-#import <LYCategory/LYCategory.h>
-
-#endif /* ${ip_lib}_h */
+@interface ${ip_lib} : NSObject
+@end
 " > $ip_lib/Classes/$ip_lib.h
 echo ""
+echo ""
+echo "//
+//  ${ip_lib}.h
+//  ${ip_lib}
+//
+//  CREATED BY $ip_creator ON $timestamp.
+//  COPYRIGHT (C) 2022 $ip_lib. ALL RIGHTS RESERVED.
+//
+
+#import "${ip_lib}.h"
+
+@implementation ${ip_lib}
+@end
+" > $ip_lib/Classes/$ip_lib.m
+echo ""
+# echo "" > $ip_lib/Classes/category/NSBundle+${ip_lib}Module.h
+# echo "" > $ip_lib/Classes/category/NSBundle+${ip_lib}Module.m
+# echo "" > $ip_lib/Classes/category/UIImage+${ip_lib}Module.h
+# echo "" > $ip_lib/Classes/category/NSBundle+${ip_lib}Module.m
 echo ""
 echo "The End."
 echo "----------------------------------"
