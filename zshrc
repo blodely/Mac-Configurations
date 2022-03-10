@@ -135,6 +135,7 @@ alias ssha="ssh -o ServerAliveInterval=59 "
 
 if [[ "$OSTYPE" = darwin* ]]; then
   alias openws="open *.xcworkspace"
+  alias openews="open Example/*.xcworkspace"
   alias openpj="open *.xcodeproj"
   alias podinst="echo '\n======= POD INSTALL >>>>>>>' && pod install"
   alias podinste="echo '\n======= POD INSTALL >>>>>>>' && pod install --project-directory=Example"
