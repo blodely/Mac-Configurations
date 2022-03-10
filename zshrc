@@ -147,7 +147,9 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-# export PATH="~/Developer/flutter/bin:$PATH"
+
+# flutter
+export PATH="$PATH:/Users/Shared/Developer/flutter/bin"
 
 UNAME_MACHINE="$(uname -m)"
 if [[ "$OSTYPE" = darwin* ]]; then
