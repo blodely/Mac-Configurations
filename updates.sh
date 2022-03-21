@@ -23,7 +23,7 @@ echo "--- 1. Master repo ---"
 cd ~/.cocoapods/repos/cocoapods
 git pull --verbose
 echo ""
-#git gc
+#git gc # skip for this giant repo
 echo ""
 echo "--- 2. LYSpecs repo ---"
 cd ~/.cocoapods/repos/LYSpecs
