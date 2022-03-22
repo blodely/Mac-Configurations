@@ -92,7 +92,7 @@ export LC_ALL=en_US.UTF-8
 hp() {
   if [ "$1" = "enable" ]
   then
-    PORT="1087"
+    PORT="38966"
     if [ -n "$2" ]
     then
       PORT="$2"
@@ -100,7 +100,7 @@ hp() {
 
     export HTTP_PROXY=http://127.0.0.1:$PORT
     export HTTPS_PROXY=http://127.0.0.1:$PORT
-  else
+  else # TO DISABLE
     export HTTP_PROXY=""
     export HTTPS_PROXY=""
   fi
@@ -121,8 +121,6 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
 
 alias gitpush="echo '\n======= GIT PUSH DEFAULT REMOTE >>>>>>>' && git push --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
 alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE >>>>>>>' && git pull --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
