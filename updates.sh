@@ -9,6 +9,7 @@ echo "--- Update Homebrew ---"
 echo "--- 1. Update brew"
 brew update
 brew cleanup
+brew outdated
 echo ""
 echo "--- 2. Upgrade brew formulas"
 brew upgrade
