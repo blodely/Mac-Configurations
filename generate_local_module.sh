@@ -14,14 +14,8 @@ echo "This script can and only generate local pod library."
 echo ""
 read -p "Creator name: " ip_creator
 read -p "Creator email: " ip_email
-read -p "Lib name (localized): " ip_lib_lo
+# read -p "Lib name (localized): " ip_lib_lo
 read -p "Lib name (en): " ip_lib_en
-if ["$ip_lib_en" == ""]; then
-  $ip_lib_en = $ip_lib_lo
-fi
-if ["$ip_lib_lo" == ""]; then
-  $ip_lib_lo = $ip_lib_en
-fi
 timestamp=$(date)
 echo ""
 echo ""
@@ -35,7 +29,7 @@ echo "done."
 echo ""
 echo ""
 echo "Generating README file:"
-echo "# $ip_lib_lo ($ip_lib_en)
+echo "# $ip_lib_en
 
 ### Requirements
 
@@ -43,10 +37,10 @@ Cocoapods.
 
 ### Installation
 
-$ip_lib_lo ($ip_lib_en) is available through local [CocoaPods](https://cocoapods.org). To install
+$ip_lib_en is available through local [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-pod '$ip_lib_lo', :path => '/path/to/local/module/'
+pod '$ip_lib_en', :path => '/path/to/local/module/'
 
 ### Author
 
@@ -54,7 +48,7 @@ $ip_creator, $ip_email
 
 ### License
 
-$ip_lib_lo ($ip_lib_en) is available under a private license. See the LICENSE file for more info.
+$ip_lib_en is available under a private license. See the LICENSE file for more info.
 
 " > README.md
 echo "done."
@@ -66,11 +60,11 @@ echo "#
 # $timestamp
 #
 Pod::Spec.new do |s|
-  s.name             = '$ip_lib_lo'
+  s.name             = '$ip_lib_en'
   s.version          = '0.1.0'
-  s.summary          = 'App Module $ip_lib_lo ($ip_lib_en).'
+  s.summary          = 'App Module $ip_lib_en.'
   s.description      = <<-DESC
-This is module $ip_lib_lo ($ip_lib_en).
+This is module $ip_lib_en.
   DESC
   s.homepage         = 'http://localhost'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -85,7 +79,7 @@ This is module $ip_lib_lo ($ip_lib_en).
   s.dependency 'LYCategory'
   #s.dependency 'LYFactAppCommon'
 end
-" > $ip_lib_lo.podspec
+" > $ip_lib_en.podspec
 echo "done."
 echo ""
 echo ""
@@ -113,7 +107,7 @@ echo "//
 @interface ${ip_lib_en} : NSObject
 @end
 " > $ip_lib_en/Classes/$ip_lib_en.h
-echo ""
+echo "${ip_lib_en}.h"
 echo ""
 echo "//
 //  ${ip_lib_en}.m
@@ -129,6 +123,7 @@ echo "//
 @implementation ${ip_lib_en}
 @end
 " > $ip_lib_en/Classes/$ip_lib_en.m
+echo "${ip_lib_en}.m"
 echo ""
 echo ""
 echo "//
@@ -173,7 +168,6 @@ echo "//
 echo "NSBundle+${ip_lib_en}.m"
 echo ""
 echo ""
-
 # echo "" > $ip_lib_en/Classes/category/UIImage+${ip_lib_en}Module.h
 # echo "" > $ip_lib_en/Classes/category/NSBundle+${ip_lib_en}Module.m
 echo ""
