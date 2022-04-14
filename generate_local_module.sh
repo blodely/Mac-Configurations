@@ -169,8 +169,49 @@ echo "//
 echo "NSBundle+${ip_lib_en}.m"
 echo ""
 echo ""
-# echo "" > $ip_lib_en/Classes/category/UIImage+${ip_lib_en}Module.h
-# echo "" > $ip_lib_en/Classes/category/NSBundle+${ip_lib_en}Module.m
+echo "//
+//	UIImage+${ip_lib_en}Module.h
+//  ${ip_lib_en}
+//
+//  CREATED BY ${ip_creator} ON ${timestamp}.
+//  COPYRIGHT (C) ${year} ${ip_lib_en}. ALL RIGHTS RESERVED.
+//
+
+#import <UIKit/UIKit.h>
+
+
+@interface UIImage (${ip_lib_en}Module)
+
++ (instancetype)${ip_lib_en}ImageNamed:(NSString *)imagename;
+
+@end
+" > $ip_lib_en/Classes/category/UIImage+${ip_lib_en}Module.h
+echo ""
+echo ""
+echo "//
+//	UIImage+${ip_lib_en}Module.m
+//  ${ip_lib_en}
+//
+//  CREATED BY ${ip_creator} ON ${timestamp}.
+//  COPYRIGHT (C) ${year} ${ip_lib_en}. ALL RIGHTS RESERVED.
+//
+
+#import \"UIImage+${ip_lib_en}Module.h\"
+#import \"NSBundle+${ip_lib_en}Module.h\"
+
+
+@implementation UIImage (${ip_lib_en}Module)
+
++ (instancetype)${ip_lib_en}ImageNamed:(NSString *)imagename {
+	if (@available(iOS 13.0, *)) {
+		return [UIImage imageNamed:imagename inBundle:[NSBundle module${ip_lib_en}Bundle] withConfiguration:nil];
+	}
+	
+	return [UIImage imageNamed:imagename inBundle:[NSBundle module${ip_lib_en}Bundle] compatibleWithTraitCollection:nil];
+}
+
+@end
+" > $ip_lib_en/Classes/category/NSBundle+${ip_lib_en}Module.m
 echo ""
 echo "The End."
 echo "----------------------------------"
