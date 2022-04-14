@@ -184,6 +184,8 @@ echo "//
 
 + (instancetype)${ip_lib_en}ImageNamed:(NSString *)imagename;
 
++ (instancetype)${ip_lib_en}ImageNamed:(NSString *)imagename inBundle:(NSBundle *)bundle;
+
 @end
 " > $ip_lib_en/Classes/category/UIImage+${ip_lib_en}Module.h
 echo ""
@@ -203,11 +205,15 @@ echo "//
 @implementation UIImage (${ip_lib_en}Module)
 
 + (instancetype)${ip_lib_en}ImageNamed:(NSString *)imagename {
+  return [self testImageNamed:imagename inBundle:[NSBundle module${ip_lib_en}Bundle]];
+}
+
++ (instancetype)${ip_lib_en}ImageNamed:(NSString *)imagename inBundle:(NSBundle *)bundle {
 	if (@available(iOS 13.0, *)) {
-		return [UIImage imageNamed:imagename inBundle:[NSBundle module${ip_lib_en}Bundle] withConfiguration:nil];
+		return [UIImage imageNamed:imagename inBundle:bundle withConfiguration:nil];
 	}
 	
-	return [UIImage imageNamed:imagename inBundle:[NSBundle module${ip_lib_en}Bundle] compatibleWithTraitCollection:nil];
+	return [UIImage imageNamed:imagename inBundle:bundle compatibleWithTraitCollection:nil];
 }
 
 @end
