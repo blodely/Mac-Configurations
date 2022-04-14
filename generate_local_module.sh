@@ -211,7 +211,7 @@ echo "//
 }
 
 @end
-" > $ip_lib_en/Classes/category/NSBundle+${ip_lib_en}Module.m
+" > $ip_lib_en/Classes/category/UIImage+${ip_lib_en}Module.m
 echo ""
 echo "The End."
 echo "----------------------------------"
