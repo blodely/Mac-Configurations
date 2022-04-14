@@ -205,7 +205,7 @@ echo "//
 @implementation UIImage (${ip_lib_en}Module)
 
 + (instancetype)${ip_lib_en}ImageNamed:(NSString *)imagename {
-  return [self testImageNamed:imagename inBundle:[NSBundle module${ip_lib_en}Bundle]];
+  return [UIImage ${ip_lib_en}ImageNamed:imagename inBundle:[NSBundle module${ip_lib_en}Bundle]];
 }
 
 + (instancetype)${ip_lib_en}ImageNamed:(NSString *)imagename inBundle:(NSBundle *)bundle {
