@@ -16,7 +16,8 @@ read -p "Creator name: " ip_creator
 read -p "Creator email: " ip_email
 # read -p "Lib name (localized): " ip_lib_lo
 read -p "Lib name (en): " ip_lib_en
-timestamp=$(date)
+timestamp=$(date "+%Y%m%d")
+year=$(date "+%Y")
 echo ""
 echo ""
 echo "Generating LICENSE file:"
@@ -99,7 +100,7 @@ echo "//
 //  ${ip_lib_en}
 //
 //  CREATED BY $ip_creator ON $timestamp.
-//  COPYRIGHT (C) 2022 $ip_lib_en. ALL RIGHTS RESERVED.
+//  COPYRIGHT (C) $year $ip_lib_en. ALL RIGHTS RESERVED.
 //
 
 #import <Foundation/Foundation.h>
@@ -114,7 +115,7 @@ echo "//
 //  ${ip_lib_en}
 //
 //  CREATED BY $ip_creator ON $timestamp.
-//  COPYRIGHT (C) 2022 $ip_lib_en. ALL RIGHTS RESERVED.
+//  COPYRIGHT (C) $year $ip_lib_en. ALL RIGHTS RESERVED.
 //
 
 #import \"${ip_lib_en}.h\"
@@ -131,7 +132,7 @@ echo "//
 //  ${ip_lib_en}
 //
 //  CREATED BY $ip_creator ON $timestamp.
-//  COPYRIGHT (C) 2022 $ip_lib_en. ALL RIGHTS RESERVED.
+//  COPYRIGHT (C) $year $ip_lib_en. ALL RIGHTS RESERVED.
 //
 
 #import <Foundation/Foundation.h>
@@ -150,7 +151,7 @@ echo "//
 //  ${ip_lib_en}
 //
 //  CREATED BY $ip_creator ON $timestamp.
-//  COPYRIGHT (C) 2022 $ip_lib_en. ALL RIGHTS RESERVED.
+//  COPYRIGHT (C) $year $ip_lib_en. ALL RIGHTS RESERVED.
 //
 
 #import \"NSBundle+${ip_lib_en}Module.h\"
