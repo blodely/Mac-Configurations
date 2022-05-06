@@ -151,10 +151,18 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="$PATH:/Users/Shared/Developer/flutter/bin"
 
 UNAME_MACHINE="$(uname -m)"
+
+# ↓ macOS ↓
 if [[ "$OSTYPE" = darwin* ]]; then
-  if [[ "${UNAME_MACHINE}" == "arm64" ]]; then
+  if [[ "${UNAME_MACHINE}" == "arm64" ]]; then # apple silicon
+    # Ruby env for Homebrew
+    export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+    # zsh-plugin syntax
     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    # OpenJDK@17
+    export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
   else
+    # zsh-plugin syntax
     source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   fi
 # brew install zsh-syntax-highlighting
