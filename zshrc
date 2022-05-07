@@ -168,9 +168,3 @@ if [[ "$OSTYPE" = darwin* ]]; then
 # brew install zsh-syntax-highlighting
 fi
 
-# RUBY env for Homebrew at Mac-Soc
-if [[ "${UNAME_MACHINE}" == "arm64" ]]; then
-  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-  export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-fi
-
