@@ -151,9 +151,10 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="$PATH:/Users/Shared/Developer/flutter/bin"
 
 UNAME_MACHINE="$(uname -m)"
+UNAME_OS="$OSTYPE"
 
 # ↓ macOS ↓
-if [[ "$OSTYPE" = darwin* ]]; then
+if [[ UNAME_OS == "darwin"* ]]; then
   if [[ "${UNAME_MACHINE}" == "arm64" ]]; then # apple silicon
     # Ruby env for Homebrew
     export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
