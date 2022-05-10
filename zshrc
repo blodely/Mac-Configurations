@@ -5,11 +5,13 @@
 # PATH TO OH-MY-ZSH INSTALLATION.
 export ZSH=~/.oh-my-zsh
 
+UNAME_MACHINE="$(uname -m)"
+
 # SET NAME OF THE THEME TO LOAD.
 # LOOK IN ~/.oh-my-zsh/themes/
 # "robbyrussell" "random" "agnoster"
-if [[ "$OSTYPE" = darwin* ]]; then
-  ZSH_THEME="agnoster"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  ZSH_THEME="robbyrussell"
 else
   if [[ $(command -v apt-get) || $(command -v yum) ]] && [[ $(command -v systemctl) ]]; then
     ZSH_THEME="agnoster"
@@ -150,11 +152,8 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 # flutter
 export PATH="$PATH:/Users/Shared/Developer/flutter/bin"
 
-UNAME_MACHINE="$(uname -m)"
-UNAME_OS="$OSTYPE"
-
 # ↓ macOS ↓
-if [[ UNAME_OS == "darwin"* ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
   if [[ "${UNAME_MACHINE}" == "arm64" ]]; then # apple silicon
     # Ruby env for Homebrew
     export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
