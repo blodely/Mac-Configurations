@@ -133,7 +133,7 @@ alias gitmgmas="echo '\n======= GIT MERGE MASTER >>>>>>' && git merge master"
 
 alias ssha="ssh -o ServerAliveInterval=59 "
 
-if [[ "$OSTYPE" = darwin* ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
   alias openws="open *.xcworkspace"
   alias openews="open Example/*.xcworkspace"
   alias openpj="open *.xcodeproj"
