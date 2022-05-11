@@ -11,7 +11,7 @@ UNAME_MACHINE="$(uname -m)"
 # LOOK IN ~/.oh-my-zsh/themes/
 # "robbyrussell" "random" "agnoster"
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  ZSH_THEME="robbyrussell"
+  ZSH_THEME="agnoster"
 else
   if [[ $(command -v apt-get) || $(command -v yum) ]] && [[ $(command -v systemctl) ]]; then
     ZSH_THEME="agnoster"
