@@ -150,7 +150,7 @@ export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 # flutter
-export PATH="$PATH:/Users/Shared/Developer/flutter/bin"
+export PATH="/Users/Shared/Developer/flutter/bin:$PATH"
 
 # zsh-plugin syntax
 # brew install zsh-syntax-highlighting
