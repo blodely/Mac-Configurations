@@ -164,6 +164,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   fi
 fi
 
+# vscode command line
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export PATH=":$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+fi
+
 # env for Homebrew
 if [[ "$OSTYPE" == "darwin"* ]]; then
   if [[ "${UNAME_MACHINE}" == "arm64" ]]; then
