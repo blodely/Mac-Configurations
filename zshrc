@@ -7,13 +7,19 @@ export ZSH=~/.oh-my-zsh
 
 UNAME_MACHINE="$(uname -m)"
 
+ISLINUX="notyet"
+if [[ $(command -v apt-get) || $(command -v yum) || $(command -v pacman) ]] && [[ $(command -v systemctl) ]]; then
+  ISLINUX="yes"
+fi
+
 # SET NAME OF THE THEME TO LOAD.
 # LOOK IN ~/.oh-my-zsh/themes/
 # "robbyrussell" "random" "agnoster"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   ZSH_THEME="agnoster"
 else
-	if [[ $(command -v apt-get) || $(command -v yum) || $(command -v pacman) ]] && [[ $(command -v systemctl) ]]; then
+  if [[ "$ISLINUX" == "yes" ]]; then
+	#if [[ $(command -v apt-get) || $(command -v yum) || $(command -v pacman) ]] && [[ $(command -v systemctl) ]]; then
     ZSH_THEME="agnoster"
   fi
   USE_POWERLINE="true"
@@ -151,7 +157,11 @@ export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 # flutter
-export PATH="/Users/Shared/Developer/flutter/bin:$PATH"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export PATH="/Users/Shared/Developer/flutter/bin:$PATH"
+elif [[ "$ISLINUX" == "yes" ]]; then
+  export PATH="/home/blodely/flutter/bin:$PATH"
+fi
 
 # zsh-plugin syntax
 # brew install zsh-syntax-highlighting
