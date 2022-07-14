@@ -13,7 +13,7 @@ UNAME_MACHINE="$(uname -m)"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   ZSH_THEME="agnoster"
 else
-  if [[ $(command -v apt-get) || $(command -v yum) ]] && [[ $(command -v systemctl) ]]; then
+	if [[ $(command -v apt-get) || $(command -v yum) || $(command -v pacman) ]] && [[ $(command -v systemctl) ]]; then
     ZSH_THEME="agnoster"
   fi
   USE_POWERLINE="true"
