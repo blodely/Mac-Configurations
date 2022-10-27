@@ -149,6 +149,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   alias podinstv="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
 fi
 
+if [[ "$ISLINUX" == "yes" ]]; then
+  alias pacsyu="sudo pacman -Syu"
+fi
+
 alias ping4="ping -t 4 "
 
 export PATH="/usr/local/bin:$PATH"
