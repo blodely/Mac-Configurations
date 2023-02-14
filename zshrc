@@ -131,6 +131,7 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias gitpush="echo '\n======= GIT PUSH DEFAULT REMOTE >>>>>>>' && git push --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
+alias gitpusht="echo '\n======= GIT PUSH TAGS >>>>>>>' && git push --tags && echo '\n \n'"
 alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE >>>>>>>' && git pull --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
 alias gitrebase="echo '\n======= GIT PULL REBASE DEFAULT REMOTE >>>>>>>' && git pull --rebase && echo ''"
 alias gitpushall="echo '\n======= GIT PUSH ALL REMOTES >>>>>>>' && git remote | xargs -L1 git push --all && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
