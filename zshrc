@@ -147,6 +147,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   alias openpj="open *.xcodeproj"
   alias podinst="echo '\n======= POD INSTALL >>>>>>>' && pod install"
   alias podinste="echo '\n======= POD INSTALL >>>>>>>' && pod install --project-directory=Example"
+  alias podreins="echo '\n======= POD re-INSTALL >>>>>>>' && rm Podfile.lock && pod install"
   alias podinstv="echo '\n======= POD INSTALL VERBOSE >>>>>>>' && pod install --verbose"
 fi
 
