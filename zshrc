@@ -192,6 +192,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/homebrew/opt/ruby/bin:$PATH" # Ruby
 	export JAVA_HOME="/opt/homebrew/opt/openjdk@17" #Java17
     export PATH="$JAVA_HOME/bin:$PATH" # OpenJDK@17
+	# export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH" # Java11
 	eval $(/opt/homebrew/bin/brew shellenv) # AppleSilicon
   else
     export PATH="/usr/local/opt/ruby/bin:$PATH" # Ruby
