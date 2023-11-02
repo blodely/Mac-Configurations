@@ -114,6 +114,18 @@ hp() {
   fi
 }
 
+hpclashx() {
+  if [ "$1" = "enable"]
+    export HTTPS_PROXY=http://127.0.0.1:7890 
+    export HTTP_PROXY=http://127.0.0.1:7890
+    export ALL_PROXY=socks5://127.0.0.1:7890
+  else
+    export HTTPS_PROXY=""
+    export HTTP_PROXY=""
+    export ALL_PROXY=""
+  fi
+}
+
 # COMPILATION FLAGS
 # export ARCHFLAGS="-arch x86_64"
 
