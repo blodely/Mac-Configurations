@@ -143,6 +143,8 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias eztarz="tar -czf"
+
 alias gitpush="echo '\n======= GIT PUSH DEFAULT REMOTE >>>>>>>' && git push --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
 alias gitpusht="echo '\n======= GIT PUSH TAGS >>>>>>>' && git push --tags && echo '\n \n'"
 alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE >>>>>>>' && git pull --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
