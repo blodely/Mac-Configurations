@@ -155,6 +155,8 @@ alias gitmgmas="echo '\n======= GIT MERGE MASTER >>>>>>' && git merge master"
 
 alias ssha="ssh -o ServerAliveInterval=59 "
 
+alias dimosizes="du -shx * | sort -rh | head -10"
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias openws="open *.xcworkspace"
   alias openews="open Example/*.xcworkspace"
