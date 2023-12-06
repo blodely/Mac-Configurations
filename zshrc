@@ -8,7 +8,8 @@ export ZSH=~/.oh-my-zsh
 UNAME_MACHINE="$(uname -m)"
 
 ISLINUX="notyet"
-if [[ $(command -v apt-get) || $(command -v yum) || $(command -v pacman) ]] && [[ $(command -v systemctl) ]]; then
+#if [[ $(command -v apt-get) || $(command -v yum) || $(command -v pacman) ]] && [[ $(command -v systemctl) ]]; then
+if [[ $OSTYPE == "linux-gnu" ]]; then
   ISLINUX="yes"
 fi
 
