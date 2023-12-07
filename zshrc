@@ -8,7 +8,8 @@ export ZSH=~/.oh-my-zsh
 UNAME_MACHINE="$(uname -m)"
 
 ISLINUX="notyet"
-if [[ $(command -v apt-get) || $(command -v yum) || $(command -v pacman) ]] && [[ $(command -v systemctl) ]]; then
+#if [[ $(command -v apt-get) || $(command -v yum) || $(command -v pacman) ]] && [[ $(command -v systemctl) ]]; then
+if [[ $OSTYPE == "linux-gnu" ]]; then
   ISLINUX="yes"
 fi
 
@@ -154,6 +155,8 @@ alias gitcomas="echo '\n======= GIT CO MASTER >>>>>>>' && git checkout master"
 alias gitmgmas="echo '\n======= GIT MERGE MASTER >>>>>>' && git merge master"
 
 alias ssha="ssh -o ServerAliveInterval=59 "
+
+alias dimosizes="du -shx * | sort -rh | head -10"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias openws="open *.xcworkspace"
