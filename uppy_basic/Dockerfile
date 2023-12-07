@@ -1,4 +1,4 @@
-# IMAGE rick/uppy-basic:1.0.0
+# IMAGE blodely/uppy-basic:1.0.0
 FROM node:18.17.1-alpine
 WORKDIR /app
 RUN apk --update add && apk add git vim bash zsh curl make gcc g++ python3 libgcc libstdc++ && cd /app

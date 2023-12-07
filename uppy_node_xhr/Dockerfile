@@ -1,5 +1,5 @@
 # IMAGE rick/uppy-node-xhr:1.0.0
-FROM rick/uppy-basic:1.0.0
+FROM blodely/uppy-basic:1.0.0
 WORKDIR /app
 RUN rm /app/examples/node-xhr/package.json && echo "{\
   \"name\": \"@uppy-example/node-xhr\",\
