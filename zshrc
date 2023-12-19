@@ -171,6 +171,8 @@ fi
 
 if [[ "$ISLINUX" == "yes" ]]; then
   alias pacsyu="sudo pacman -Syu"
+  alias dockers="sudo docker "
+  alias dockersal="sudo docker ps -a"
 fi
 
 alias ping4="ping -t 4 "
