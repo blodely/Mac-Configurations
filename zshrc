@@ -121,11 +121,37 @@ hpclashx() {
     export HTTPS_PROXY=http://127.0.0.1:7890
     export HTTP_PROXY=http://127.0.0.1:7890
 #    export ALL_PROXY=socks5://127.0.0.1:7890
+    echo "hpclashx: enable"
   else
     export HTTPS_PROXY=""
     export HTTP_PROXY=""
 #    export ALL_PROXY=""
+    echo "hpclashx: disable"
   fi
+}
+
+hpclashwsl() {
+  if [ "$1" = "enable" ]
+  then
+    if [ -z ${WSL_DISTRO_NAME+x} ]; 
+      then
+        echo "hpclashwsl: try to enable, but not in wsl";
+      else
+        hostip=$(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*')
+        export https_proxy="http://${hostip}:7890"
+        export http_proxy="http://${hostip}:7890"
+        export all_proxy="socks5://${hostip}:7890"
+    fi
+  else
+    export https_proxy=""
+    export http_proxy=""
+    export all_proxy=""
+    echo "hpclashwsl: disable"
+  fi
+
+  
+    
+
 }
 
 # COMPILATION FLAGS
