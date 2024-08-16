@@ -15,7 +15,8 @@ fi
 
 # SET NAME OF THE THEME TO LOAD.
 # LOOK IN ~/.oh-my-zsh/themes/
-# "robbyrussell" "random" "agnoster"
+# "robbyrussell" "random" 
+# "agnoster" "alanpeabody"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   ZSH_THEME="agnoster"
 else
@@ -148,10 +149,6 @@ hpclashwsl() {
     export all_proxy=""
     echo "hpclashwsl: disable"
   fi
-
-  
-    
-
 }
 
 # COMPILATION FLAGS
