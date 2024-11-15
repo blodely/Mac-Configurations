@@ -100,6 +100,20 @@ export LC_ALL=en_US.UTF-8
 # fi
 
 hp() {
+  if [ "$1" = "enable"]
+  then
+    PROXY_ADDR="127.0.0.1:7890"
+    if [ -n "$2" ]
+    then
+      PROXY_ADDR="$2"
+    fi
+    export http_proxy=http://$PROXY_ADDR https_proxy=http://$PROXY_ADDR all_proxy=socks5://$PROXY_ADDR
+  else
+    export http_proxy="" https_proxy="" all_proxy=""
+  fi
+}
+
+hp2a() {
   if [ "$1" = "enable" ]
   then
     PORT="20172"
