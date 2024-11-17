@@ -100,13 +100,12 @@ export LC_ALL=en_US.UTF-8
 # fi
 
 hp() {
-  if [ "$1" = "enable"]
-  then
+  if [ "$1" = "enable" ]; then
     PROXY_ADDR="127.0.0.1:7890"
-    if [ -n "$2" ]
-    then
+    if [ -n "$2" ]; then
       PROXY_ADDR="$2"
     fi
+    
     export http_proxy=http://$PROXY_ADDR https_proxy=http://$PROXY_ADDR all_proxy=socks5://$PROXY_ADDR
   else
     export http_proxy="" https_proxy="" all_proxy=""
@@ -114,11 +113,9 @@ hp() {
 }
 
 hp2a() {
-  if [ "$1" = "enable" ]
-  then
+  if [ "$1" = "enable" ]; then
     PORT="20172"
-    if [ -n "$2" ]
-    then
+    if [ -n "$2" ]; then
       PORT="$2"
     fi
 
@@ -131,8 +128,7 @@ hp2a() {
 }
 
 hpclashx() {
-  if [ "$1" = "enable" ]
-  then
+  if [ "$1" = "enable" ]; then
     export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
     echo "hpclashx: enable"
   else
@@ -142,16 +138,14 @@ hpclashx() {
 }
 
 hpclashwsl() {
-  if [ "$1" = "enable" ]
-  then
-    if [ -z ${WSL_DISTRO_NAME+x} ]; 
-      then
-        echo "hpclashwsl: try to enable, but not in wsl";
-      else
-        hostip=$(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*')
-        export https_proxy="http://${hostip}:7890"
-        export http_proxy="http://${hostip}:7890"
-        export all_proxy="socks5://${hostip}:7890"
+  if [ "$1" = "enable" ]; then
+    if [ -z ${WSL_DISTRO_NAME+x} ]; then
+      echo "hpclashwsl: try to enable, but not in wsl";
+    else
+      hostip=$(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*')
+      export https_proxy="http://${hostip}:7890"
+      export http_proxy="http://${hostip}:7890"
+      export all_proxy="socks5://${hostip}:7890"
     fi
   else
     export https_proxy=""
