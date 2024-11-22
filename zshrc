@@ -198,7 +198,7 @@ fi
 
 if [[ "$ISLINUX" == "yes" ]]; then
   alias pacsyu="sudo pacman -Syu"
-  alias clearcmd="sed -i '/\b\(ls\|ll\|la\|pwd\|rm\|cd\|mv\|scp\|mkdir\|reboot\)\b/d' filename"
+  alias clearcmd="sed -i '/\b\(ls\|ll\|la\|pwd\|rm\|cd\|mv\|scp\|mkdir\|reboot\)\b/d' .zsh_history"
 fi
 
 alias ping4="ping -t 4 "
