@@ -198,8 +198,7 @@ fi
 
 if [[ "$ISLINUX" == "yes" ]]; then
   alias pacsyu="sudo pacman -Syu"
-  alias dockers="sudo docker "
-  alias dockersal="sudo docker ps -a"
+  alias clearcmd="sed -i '/\b\(ls\|ll\|la\|pwd\|rm\|cd\|mv\|scp\|mkdir\|reboot\)\b/d' filename"
 fi
 
 alias ping4="ping -t 4 "
