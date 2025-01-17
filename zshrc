@@ -185,6 +185,8 @@ alias ssha="ssh -o ServerAliveInterval=59 "
 
 alias dimosizes="du -shx * | sort -rh | head -10"
 
+alias brewcasku="brew upgrade --cask --greedy --verbose"
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias openws="open *.xcworkspace"
   alias openews="open Example/*.xcworkspace"
