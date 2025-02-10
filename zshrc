@@ -22,7 +22,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 else
   if [[ "$ISLINUX" == "yes" ]]; then
 	#if [[ $(command -v apt-get) || $(command -v yum) || $(command -v pacman) ]] && [[ $(command -v systemctl) ]]; then
-    ZSH_THEME="agnoster"
+    ZSH_THEME="alanpeabody"
   fi
   USE_POWERLINE="true"
   if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
