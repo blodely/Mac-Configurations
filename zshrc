@@ -213,6 +213,7 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 # flutter
 if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/Users/Shared/Developer/flutter/bin:$PATH"
+  export CHROME_EXECUTABLE="/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge"
 elif [[ "$ISLINUX" == "yes" ]]; then
   export PATH="/home/blodely/flutter/bin:$PATH"
 fi
@@ -251,3 +252,17 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+
+# bun
+export BUN_INSTALL="$HOME/Library/Application Support/reflex/bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# rust # `rustup self uninstal`
+export RUSTUP_HOME="$HOME/.rustup"
+export CARGO_HOME="$HOME/.cargo"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# arm
+export PATH="$HOME/Developer/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi/bin:$PATH"
+export PICO_SDK_PATH="$HOME/Projects/c.github/c.clockworkpi/pico-sdk"
+export PICO_TOOLCHAIN_PATH="$HOME/Developer/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi"
