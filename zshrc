@@ -2,6 +2,7 @@
 # LUO YU
 # CREATE AT 2013-09-10
 #
+
 # PATH TO OH-MY-ZSH INSTALLATION.
 export ZSH=~/.oh-my-zsh
 
@@ -13,6 +14,7 @@ if [[ $OSTYPE == "linux-gnu" ]]; then
   ISLINUX="yes"
 fi
 
+# ==================================================
 # SET NAME OF THE THEME TO LOAD.
 # LOOK IN ~/.oh-my-zsh/themes/
 # "robbyrussell" "random" 
@@ -32,6 +34,11 @@ else
     source /usr/share/zsh/manjaro-zsh-prompt
   fi
 fi
+
+# ==================================================
+# LIMITS ALL BREW DOWNLOADS TO 8MB/s
+export HOMEBREW_CURL_OPTIONS="--limit-rate 8M"
+
 
 # UNCOMMENT THE FOLLOWING LINE TO USE CASE-SENSITIVE COMPLETION.
 # CASE_SENSITIVE="true"
@@ -99,6 +106,8 @@ export LC_ALL=en_US.UTF-8
 #   export EDITOR='mvim'
 # fi
 
+# ==================================================
+# PROXY SETTER (BY Rick)
 hp() {
   if [ "$1" = "enable" ]; then
     PROXY_ADDR="127.0.0.1:7890"
@@ -161,6 +170,7 @@ hpclashwsl() {
 # SSH
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# ==================================================
 # SET PERSONAL ALIASES, OVERRIDING THOSE PROVIDED BY OH-MY-ZSH LIBS,
 # PLUGINS, AND THEMES. ALIASES CAN BE PLACED HERE, THOUGH OH-MY-ZSH
 # USERS ARE ENCOURAGED TO DEFINE ALIASES WITHIN THE 'ZSH_CUSTOM' FOLDER.
@@ -173,6 +183,8 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias eztarz="tar -czf"
 
+# --------------------------------------------------
+# GIT ALIAS
 alias gitpush="echo '\n======= GIT PUSH DEFAULT REMOTE >>>>>>>' && git push --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
 alias gitpusht="echo '\n======= GIT PUSH TAGS >>>>>>>' && git push --tags && echo '\n \n'"
 alias gitpull="echo '\n======= GIT PULL DEFAULT REMOTE >>>>>>>' && git pull --verbose && echo '' && echo '======= GIT GC >>>>>>>' && git gc"
@@ -187,6 +199,8 @@ alias dimosizes="du -shx * | sort -rh | head -10"
 
 alias brewcasku="brew upgrade --cask --greedy --verbose"
 
+# --------------------------------------------------
+# XCODE ALIAS
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias openws="open *.xcworkspace"
   alias openews="open Example/*.xcworkspace"
@@ -267,3 +281,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/Developer/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi/bin:$PATH"
 export PICO_SDK_PATH="$HOME/Projects/c.github/c.clockworkpi/pico-sdk"
 export PICO_TOOLCHAIN_PATH="$HOME/Developer/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/blodely/.cache/lm-studio/bin"
+# End of LM Studio CLI section
+
