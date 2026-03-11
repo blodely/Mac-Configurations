@@ -229,6 +229,9 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/Users/Shared/Developer/flutter/bin:$PATH"
   export CHROME_EXECUTABLE="/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge"
+  # cn sources
+  export PUB_HOSTED_URL="https://pub.flutter-io.cn"
+  export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 elif [[ "$ISLINUX" == "yes" ]]; then
   export PATH="/home/blodely/flutter/bin:$PATH"
 fi
