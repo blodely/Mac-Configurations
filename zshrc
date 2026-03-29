@@ -115,8 +115,9 @@ hp() {
       PROXY_ADDR="$2"
     fi
     
-    export http_proxy=http://$PROXY_ADDR https_proxy=http://$PROXY_ADDR all_proxy=socks5://$PROXY_ADDR
+    export http_proxy=http://$PROXY_ADDR https_proxy=http://$PROXY_ADDR all_proxy=socks5://$PROXY_ADDR export NO_PROXY=localhost,127.0.0.1,::1
   else
+    echo "Proxy removed";
     export http_proxy="" https_proxy="" all_proxy=""
   fi
 }
@@ -136,15 +137,6 @@ hp2a() {
   fi
 }
 
-hpclashx() {
-  if [ "$1" = "enable" ]; then
-    export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
-    echo "hpclashx: enable"
-  else
-    export HTTPS_PROXY="" HTTP_PROXY="" ALL_PROXY=""
-    echo "hpclashx: disable"
-  fi
-}
 
 hpclashwsl() {
   if [ "$1" = "enable" ]; then
